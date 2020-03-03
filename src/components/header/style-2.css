@@ -1,0 +1,52 @@
+/* Контейнер с шапкой */
+.headerWrapperTop {
+  border-bottom: 1px solid #e6e6e6;
+  position: relative;
+}
+
+.headerWrapper.v2 {
+  /* border-bottom: none; */
+  position: relative;
+}
+
+.v2 .header {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.v2 #logo {
+  margin-right: 18px;
+  margin-top: 8px;
+  height: 42px;
+}
+
+.v2 .sectionMenuItem,
+.v2 .userMenuItem {
+  font-size: 13px;
+}
+
+.v2 .mainMenuItem {
+  /* font-size: 18px; */
+}
+
+.v2 .menuWrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-top: 0;
+  width: 100%;
+}
+
+.v2 .topMenu {
+  width: 100%;
+  margin-top: 4px;
+  margin-bottom: 8px;
+}
+
+.v2 .mainMenuItem {
+  padding-top: 20px;
+  padding-bottom: 6px;
+}

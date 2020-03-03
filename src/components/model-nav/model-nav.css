@@ -1,0 +1,50 @@
+.modelNavigatorWrapper {
+  position: fixed;
+  z-index: 10000;
+  left: 0;
+  bottom: 0;
+  width: 250px;
+  padding: 10px;
+  color: gray;
+}
+
+.modelNavigator {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.modelNavigator.none {
+  opacity: 0;
+}
+
+.modelNavigator a {
+  font-size: 12px;
+  color: var(--color-500);
+  text-decoration: none;
+  margin-bottom: 5px;
+}
+
+.modelNavigator a:hover {
+  color: red;
+}
+
+.modelNavigator a.active {
+  color: black;
+  font-weight: bold;
+}
+
+.modelNavigatorWrapper .action {
+  color: var(--color-500);
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.modelNavigator p {
+  margin: 8px 0 4px 0;
+  font-size: 13px;
+  color: rgba(0, 0, 0, 0.3);
+}

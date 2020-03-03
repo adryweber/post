@@ -1,0 +1,144 @@
+/* Две модели сетки для мобилки - 6 колонок, для веба 12 */
+@media screen and (max-width: 767px) {
+  .mob {
+    display: block;
+  }
+  .web {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .mob {
+    display: none;
+  }
+  .web {
+    display: block;
+  }
+}
+
+/* 320 */
+@media screen and (max-width: 767px) {
+  .gridRow {
+    margin: 0 12px;
+    --width: 100%; /* 1280 - 50 */ /* Ширина ряда: от краев крайних колонок; без полей до краев окна! */
+    --col: 100%;
+    --gap: 22px;
+    --color: #e77ef0;
+  }
+}
+
+/* 768 */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .gridRow {
+    margin: 0 16px;
+    --width: 100%; /* Ширина контейнера - резина!!! Ширина колонок - резина; Геп - фикс!! */
+    --col: 100%;
+    --gap: 20px;
+    --color: #ff9898;
+  }
+}
+
+/* 1024 */
+@media screen and (min-width: 1024px) and (max-width: 1365px) {
+  .gridRow {
+    margin: 0 32px;
+    --width: 960px;
+    --col: 58px;
+    --gap: 24px;
+    --color: #ffed4f;
+  }
+}
+
+/* 1366 */
+@media screen and (min-width: 1366px) and (max-width: 1919px) {
+  .gridRow {
+    margin: 0 101px;
+    --width: 1164px;
+    --col: 75px;
+    --gap: 24px;
+    --color: #80af85;
+  }
+}
+
+/* 1920 */
+@media screen and (min-width: 1920px) {
+  .gridRow {
+    margin: 0 144px;
+    --width: 1632px;
+    --col: 114px;
+    --gap: 24px;
+    --color: #74a4eb;
+  }
+}
+/* Вариант резины от 1024 и больше */
+@media screen and (min-width: 1024px) {
+  .gridRow.fluid {
+    margin: 0 32px;
+    --width: 100%;
+    --col: 100%;
+    --gap: 24px;
+    --color: #dcdcdc;
+  }
+}
+
+/* Далее элементы сетки  */
+
+/* Враппер ряда */
+.gridRowWrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+/* Ряд */
+.gridRow {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  min-width: 296px; /* 1230px; */
+  width: var(--width);
+}
+
+/* ВАРИАНТ 1 формирования гепов: в каждой колонке по бокам - половинный отступ */
+
+/* Контейнер содержания колонки. Боковые границы - из них формируется Gap */
+/* .gridCol {
+  margin: 0 calc(var(--gap) / 2);
+} */
+
+/* Первая и последняя колонка. Компенсация левого и правого крайних отступов */
+/* .gridRow > div:first-child {
+  margin-left: calc((var(--gap) / 2) * -1);
+}
+
+.gridRow > div:last-child {
+  margin-right: calc((var(--gap) / 2) * -1);
+} */
+
+/* Стиль для отрисовки границ колонок в ряду */
+/* .gridRow > div {
+  outline: rgba(150, 80, 170, 0.4) 1px solid;
+} */
+
+/* ВАРИАНТ 2 формирования гепов между внутренними колонками полый отступ */
+.gridRow > div:not(:last-child) {
+  margin-right: var(--gap);
+}
+
+/* Индикация колонки фоном. Разный цвет фона - разная ширина сетки */
+.gridRow div.coloredBg {
+  background-color: var(--color);
+  opacity: 0.2;
+  height: 100%;
+}
+
+/* Вывод параметров сетки */
+.gridInfo {
+  position: absolute;
+  z-index: 100;
+  bottom: 10px;
+  right: 10px;
+  font-size: 12px;
+  font-family: Arial;
+}

@@ -1,0 +1,206 @@
+$page-font-size: 16px; // 14px
+$page-line-height: 24px; // 20px
+
+.container {
+  width: 640px;
+  margin: 0 auto;
+  //   position: relative;
+}
+// p,
+// h1,
+// h2,
+// h3,
+// ul,
+// li,
+// dl,
+// dd,
+// dt {
+//   outline: 1px solid rgba(150, 80, 170, 0.4);
+// }
+p {
+  position: relative;
+}
+body {
+  font-family: "Roboto";
+  color: #1a1a1a;
+}
+
+/* color: rgb(51, 51, 51); */
+/* outline: 1px solid rgba(150, 80, 170, 0.2); */
+
+/* Заголовки -------------------------------- */
+
+h1.h0 {
+  font-size: 42px;
+  line-height: 52px;
+  /* margin-bottom: 12px; */
+}
+
+h1 {
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 40px;
+  /* margin-bottom: 12px; */
+}
+
+h2 {
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 28px;
+  letter-spacing: 0.2px;
+  margin-top: 36px;
+}
+
+h3 {
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: 0.1px;
+  margin-bottom: 6px;
+  margin-top: 16px;
+}
+
+/* Тексты -------------------------------- li,
+dd  */
+.portalText {
+  font-size: 18px;
+  line-height: 28px;
+}
+
+p,
+.normalText {
+  font-size: $page-font-size;
+  line-height: $page-line-height;
+  /* font-size: 16px;
+  line-height: 24px; */
+  margin: 0 0 8px 0;
+}
+
+.smallText {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.vrezka {
+  color: #0055a6;
+  padding: 16px 30px 16px 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  margin: 24px 0;
+  margin-left: -30px;
+}
+
+/* Картинки -------------------------------- */
+.bicPic {
+  margin: 24px 0;
+
+  img {
+    border-radius: 4px;
+  }
+}
+
+.smallPic {
+  float: right;
+  width: 200px;
+  text-align: center;
+  margin-bottom: 16px;
+  margin-left: 20px;
+}
+
+.picName {
+  margin-top: 8px;
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.smallPic .picName {
+  font-size: 12px;
+  line-height: 18px;
+  margin-top: 4px;
+}
+
+.clearRight {
+  clear: right;
+}
+
+/*  -------------------------------- */
+
+.yearLog {
+  position: absolute;
+  left: -50px;
+  top: 2px;
+  color: rgba(0, 0, 0, 0.4);
+}
+
+/*  Обычный список -------------------------------- */
+ul {
+  padding-inline-start: 20px;
+}
+
+li {
+  list-style-type: none;
+  position: relative;
+  margin-bottom: 8px; /* Как после абзаца */
+  /* list-style-position: outside; */
+}
+
+li:before {
+  content: "—";
+  position: absolute;
+  left: -20px;
+  color: #0055a6;
+}
+
+/*  Список терминов (годы) -------------------------------- */
+dl {
+  /* padding-inline-start: 0; */
+  font-size: $page-font-size;
+  line-height: $page-line-height;
+  /* font-size: 16px;
+  line-height: 24px; */
+}
+
+dt {
+  float: left;
+  width: 76px;
+  margin-right: 16px;
+  text-align: right;
+  color: rgba(0, 0, 0, 0.4);
+  position: relative;
+}
+
+dd {
+  margin-left: 92px;
+  margin-bottom: 12px;
+}
+
+/* .twoCols {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 1000px;
+} */
+
+/*  Блок с хронологией услуг -------------------------------- */
+.twoCols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 20px;
+  grid-template-rows: 1fr;
+}
+
+.yearBlock + .yearBlock {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.yearBlock ul {
+  margin: 0;
+  padding-inline-start: 0;
+}
+
+.yearBlock li:before {
+  content: "✉️"; /* ⚑  */
+  font-size: 16px;
+  color: #0055a6;
+  position: relative;
+  left: 0;
+  margin-right: 4px;
+}
